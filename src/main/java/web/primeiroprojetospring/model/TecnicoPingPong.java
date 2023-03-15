@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
 public class TecnicoPingPong implements Tecnico {
 
 	private static final Logger logger = LoggerFactory.getLogger(TecnicoPingPong.class);
