@@ -2,7 +2,9 @@ package web.primeiroprojetospring.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SorteDiariaFelizService implements SorteDiariaService {
 
 	private static final Logger logger = LoggerFactory.getLogger(SorteDiariaFelizService.class);

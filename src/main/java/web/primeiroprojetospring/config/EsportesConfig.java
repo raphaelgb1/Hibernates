@@ -10,7 +10,8 @@ import web.primeiroprojetospring.model.Tecnico;
 import web.primeiroprojetospring.model.TecnicoNatacao;
 
 @Configuration
-@ComponentScan("web.primeiroprojetospring.model")
+@ComponentScan(basePackages = { "web.primeiroprojetospring.model",
+        "web.primeiroprojetospring.service" })
 public class EsportesConfig {
     private static final Logger logger = LoggerFactory.getLogger(EsportesConfig.class);
 

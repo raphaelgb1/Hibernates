@@ -2,6 +2,7 @@ package web.primeiroprojetospring.model;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import web.primeiroprojetospring.service.SorteDiariaService;
 
@@ -15,7 +16,7 @@ public class TecnicoNatacao implements Tecnico {
 		logger.debug(">> TecnicoNatacao: dentro do construtor padrão");
 	}
 		
-	public TecnicoNatacao(SorteDiariaService sorteDiariaService) {
+	public TecnicoNatacao(@Autowired SorteDiariaService sorteDiariaService) {
 		logger.debug(">> TecnicoNatacao: dentro do construtor de inicialização");
 		this.sorteDiariaService = sorteDiariaService;
 	}
