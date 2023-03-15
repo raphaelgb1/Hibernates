@@ -2,12 +2,14 @@ package web.primeiroprojetospring.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import web.primeiroprojetospring.model.Tecnico;
 import web.primeiroprojetospring.model.TecnicoNatacao;
+import web.primeiroprojetospring.service.SorteDiariaService;
 
 @Configuration
 @ComponentScan(basePackages = { "web.primeiroprojetospring.model",
@@ -20,8 +22,8 @@ public class EsportesConfig {
     }
 
     @Bean
-    public Tecnico tecnicoNatacao() {
+    public Tecnico tecnicoNatacao(@Autowired SorteDiariaService sorteDiariaService) {
         logger.debug(">> EsportesConfig: dentro do método fábrica tecnicoNatacao");
-        return new TecnicoNatacao();
+        return new TecnicoNatacao(sorteDiariaService);
     }
 }
