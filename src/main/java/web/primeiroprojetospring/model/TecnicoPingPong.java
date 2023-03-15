@@ -2,9 +2,11 @@ package web.primeiroprojetospring.model;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("prototype")
 public class TecnicoPingPong implements Tecnico {
 
 	private static final Logger logger = LoggerFactory.getLogger(TecnicoPingPong.class);
