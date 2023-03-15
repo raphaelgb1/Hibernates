@@ -12,8 +12,8 @@ public class EsportesAppSpring {
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(EsportesConfig.class);
 
-        Tecnico tecnico1 = context.getBean(TecnicoPingPong.class);
-        Tecnico tecnico2 = context.getBean(TecnicoNatacao.class);
+        Tecnico tecnico1 = context.getBean("xurumela", Tecnico.class);
+        Tecnico tecnico2 = context.getBean("tecnicoNatacao", Tecnico.class);
 
         System.out.println(tecnico1.getExercicioDiario());
         System.out.println(tecnico1.getSorteDiaria());
