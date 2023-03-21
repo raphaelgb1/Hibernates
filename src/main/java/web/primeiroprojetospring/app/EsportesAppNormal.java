@@ -22,8 +22,8 @@ public class EsportesAppNormal {
         tecnicos[3] = tecnico2;
 
         for (Tecnico tecnico: tecnicos) {
-            System.out.println(tecnico1.getExercicioDiario());
-            System.out.println(tecnico1.getSorteDiaria());
+            System.out.println(tecnico.getExercicioDiario());
+            System.out.println(tecnico.getSorteDiaria());
         }
     }
 }
