@@ -10,9 +10,13 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Random;
 
+import javax.annotation.PostConstruct;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SorteDiariaArquivoService implements SorteDiariaService {
 
     private static final Logger logger = LoggerFactory.getLogger(SorteDiariaArquivoService.class);
@@ -26,8 +30,9 @@ public class SorteDiariaArquivoService implements SorteDiariaService {
    		logger.debug(">> SorteDiariaArquivoService: dentro do construtor padrão");
    	}
    
-   	public void carregarArquivoSortesDiarias() {
-   		try {
+	@PostConstruct
+	public void carregarArquivoSortesDiarias() {
+		try {
    			logger.debug(">> SorteDiariaArquivoService: dentro do método carregarArquivoSortesDiarias");
    
    			ClassLoader classLoader = getClass().getClassLoader();
@@ -37,7 +42,7 @@ public class SorteDiariaArquivoService implements SorteDiariaService {
    			sortesDiarias = Files.readAllLines(caminhoArquivo);
    
    			logger.debug("Arquivo existe: " + Files.exists(caminhoArquivo));
-		logger.debug("Lendo fortunas do arquivo: " + caminhoArquivo.getFileName());
+			logger.debug("Lendo fortunas do arquivo: " + caminhoArquivo.getFileName());
    
    		} catch (IOException e) {
    			logger.error("Erro ao ler o arquivo das fortunas " + e);

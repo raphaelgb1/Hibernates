@@ -3,6 +3,7 @@ package web.primeiroprojetospring.model;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import web.primeiroprojetospring.service.SorteDiariaService;
@@ -13,12 +14,13 @@ public class TecnicoTenis implements Tecnico {
 	private static final Logger logger = LoggerFactory.getLogger(TecnicoTenis.class);
 
 	@Autowired
+	@Qualifier("sorteDiariaArquivoService")
 	private SorteDiariaService sorteDiariaService;
 
 	public TecnicoTenis() {
 		logger.debug(">> TecnicoTenis: dentro do construtor padrão");
 	}
-
+	
 	public TecnicoTenis(SorteDiariaService sorteDiadiaService) {
 		logger.debug(">> TecnicoTenis: dentro do construtor de inicialização");
 		this.sorteDiariaService = sorteDiadiaService;
