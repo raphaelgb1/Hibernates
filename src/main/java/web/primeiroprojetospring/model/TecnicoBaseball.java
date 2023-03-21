@@ -2,9 +2,12 @@ package web.primeiroprojetospring.model;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import web.primeiroprojetospring.service.SorteDiariaService;
 
+@Component
 public class TecnicoBaseball implements Tecnico {
 
 	private static final Logger logger = LoggerFactory.getLogger(TecnicoBaseball.class);
@@ -20,6 +23,7 @@ public class TecnicoBaseball implements Tecnico {
 		this.sorteDiariaService = sorteDiadiaService;
 	}
 
+	@Autowired
 	public void setSorteDiariaService(SorteDiariaService sorteDiadiaService) {
 		logger.debug(">> TecnicoBaseball: dentro do setter do SorteDiariaService");
 		this.sorteDiariaService = sorteDiadiaService;

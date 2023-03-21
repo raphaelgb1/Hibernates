@@ -735,3 +735,4 @@
 2023-03-21 19:30:06.396 PM [main] DEBUG web.primeiroprojetospring.service.SorteDiariaFelizService - >> SorteDiariaFelizService: dentro do construtor padrão
 2023-03-21 19:30:40.983 PM [main] DEBUG web.primeiroprojetospring.service.SorteDiariaFelizService - >> SorteDiariaFelizService: dentro do construtor padrão
 2023-03-21 19:32:34.863 PM [main] DEBUG web.primeiroprojetospring.service.SorteDiariaFelizService - >> SorteDiariaFelizService: dentro do construtor padrão
+2023-03-21 19:37:14.736 PM [main] DEBUG web.primeiroprojetospring.service.SorteDiariaFelizService - >> SorteDiariaFelizService: dentro do construtor padrão
