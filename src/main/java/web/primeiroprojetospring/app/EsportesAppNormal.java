@@ -4,6 +4,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import web.primeiroprojetospring.config.EsportesConfig;
 import web.primeiroprojetospring.model.Tecnico;
+import web.primeiroprojetospring.model.TecnicoNatacao;
 import web.primeiroprojetospring.service.SorteDiariaArquivoService;
 import web.primeiroprojetospring.service.SorteDiariaFelizService;
 import web.primeiroprojetospring.service.SorteDiariaRandomicaService;
@@ -29,6 +30,8 @@ public class EsportesAppNormal {
         Tecnico tecnicos[] = new Tecnico[4];
 
         tecnicos[0] = context.getBean("xurumela", Tecnico.class);
+        TecnicoNatacao tecnico1 = new TecnicoNatacao();
+        tecnico1.setSorteDiariaService(rand);
         tecnicos[1] = context.getBean("tecnicoNatacao", Tecnico.class);
         tecnicos[2] = context.getBean("tecnicoTenis", Tecnico.class);
         tecnicos[3] = context.getBean("tecnicoBaseball", Tecnico.class);

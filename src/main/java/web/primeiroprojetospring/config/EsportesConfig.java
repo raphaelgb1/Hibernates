@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import web.primeiroprojetospring.model.Tecnico;
 import web.primeiroprojetospring.model.TecnicoNatacao;
 import web.primeiroprojetospring.service.SorteDiariaService;
+import web.primeiroprojetospring.service.SorteDiariaTristeService;
 
 @Configuration
 @ComponentScan(basePackages = { "web.primeiroprojetospring.model",
@@ -25,5 +26,10 @@ public class EsportesConfig {
     public Tecnico tecnicoNatacao(@Autowired SorteDiariaService sorteDiariaService) {
         logger.debug(">> EsportesConfig: dentro do método fábrica tecnicoNatacao");
         return new TecnicoNatacao(sorteDiariaService);
+    }
+    @Bean
+    public SorteDiariaService sorteDiariaTristeService() {
+        logger.debug(">> EsportesConfig: dentro do método fábrica sorteDiariaTristeService");
+        return new SorteDiariaTristeService();
     }
 }
