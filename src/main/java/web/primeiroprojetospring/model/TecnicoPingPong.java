@@ -14,11 +14,11 @@ public class TecnicoPingPong implements Tecnico {
 	
 	private SorteDiariaService sorteDiariaService;
 	
-	public TecnicoPingPong() {
-		logger.debug(">> TecnicoPingPong: dentro do construtor padrão");
-	}
+	// public TecnicoPingPong() {
+	// 	logger.debug(">> TecnicoPingPong: dentro do construtor padrão");
+	// }
 			
-	@Autowired
+	// @Autowired
 	public TecnicoPingPong(SorteDiariaService sorteDiariaService) {
 		logger.debug(">> TecnicoPingPong: dentro do construtor de inicialização");
 		this.sorteDiariaService = sorteDiariaService;
